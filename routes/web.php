@@ -13,3 +13,4 @@ Route::get('/halo/{nama}', function (string $nama) {
 
 Route::get('/buku', [BukuController::class, 'index']);
 Route::get('/buku/{id}', [BukuController::class, 'show']);
+Route::get('/api/buku', [BukuController::class, 'api']);
