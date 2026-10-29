@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 class BukuController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return 'daftar buku';
+        $cari = $request->query('q', '');
+        return "mencari: $cari";
     }
 
     public function show($id)
